@@ -1,0 +1,13 @@
+.vs/
+*/Configs/*/*
+*/extensions/*/*.cpp
+*/extensions/*/*.dll
+*/Release/
+Release/
+export/*.gmez
+export/*.png
+export/*.gmz
+*.sdf
+help.rtf
+/cs
+/netlog.gmx/datafiles/netlog
