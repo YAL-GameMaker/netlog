@@ -1,6 +1,10 @@
 import sys.net.Host;
 import sys.net.Socket;
 
+/**
+ * What did you expect?
+ * @author YellowAfterlife
+ */
 class Main {
 	static var lock = false;
 	static function clientThread(cl:Socket) {
@@ -30,6 +34,10 @@ class Main {
 	}
 	static inline var defPort = 5101;
 	static function main() {
+		#if cs
+		CsConsoleTools.enableVTT();
+		#end
+		
 		var args = Sys.args();
 		var wait = args.length == 0;
 		var i = 0;
@@ -48,6 +56,7 @@ class Main {
 			port = Std.parseInt(Sys.stdin().readLine());
 			if (port == null) port = defPort;
 		}
+		
 		var sv = new Socket();
 		try {
 			sv.bind(new Host("0.0.0.0"), port);

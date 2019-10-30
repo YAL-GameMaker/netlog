@@ -48,6 +48,11 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\netlog_fg_rgb.gml</script>
+    <script>scripts\netlog_bg_rgb.gml</script>
+    <script>scripts\netlog_with_level.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_test</font>
   </fonts>

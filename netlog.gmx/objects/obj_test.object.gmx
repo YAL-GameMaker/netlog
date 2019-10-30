@@ -113,8 +113,14 @@ switch (time) {
         } else {
             s = "Netlog is not connected.#Debug output goes to IDE log (or nowhere).";
         }
+        if (keyboard_check_pressed(vk_space)) {
+            netlog_with_level("input", 240, 100, 200, "You pressed space!");
+        }
+        
         if (time mod 30 == 0) {
-            netlog(string(time div 30) + "s elapsed.");
+            var msg = string(time div 30) + "s elapsed.";
+            netlog_with_level("info", 139, 209, 105, msg);
+            // netlog(msg); // plain
         }
 }
 draw_text_ext(5, 5, s, -1, room_width - 10);
