@@ -33,7 +33,7 @@ class Main {
 		var args = Sys.args();
 		var wait = args.length == 0;
 		var i = 0;
-		var port = null;
+		var port:Null<Int> = null;
 		while (i < args.length) {
 			switch (args[i]) {
 				case "--port": {
